@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     var newVersion = semver.inc(pkg.version, type || 'patch') || type;
     var tag = 'v' + newVersion;
     var filenames = ['package.json'];
-    if fs.existsSync('system.json') {
+    if (fs.existsSync('system.json')) {
       filenames.push('system.json');
     }
     inquirer.prompt([{
