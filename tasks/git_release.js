@@ -8,6 +8,7 @@
 
 'use strict';
 
+var fs = require('fs');
 var semver = require('semver');
 var shell = require('shelljs');
 var _ = require('underscore');
@@ -33,7 +34,10 @@ module.exports = function(grunt) {
     var pkg = grunt.file.readJSON('package.json');
     var newVersion = semver.inc(pkg.version, type || 'patch') || type;
     var tag = 'v' + newVersion;
-    var filenames = ['package.json', 'system.json'];
+    var filenames = ['package.json'];
+    if fs.existsSync('system.json') {
+      filenames.push('system.json');
+    }
     inquirer.prompt([{
       type: 'confirm',
       name: 'confirmation',
