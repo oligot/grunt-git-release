@@ -17,69 +17,34 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-git-release');
 ```
 
-## The "git_release" task
+## Run
 
-### Overview
-In your project's Gruntfile, add a section named `git_release` to the data object passed into `grunt.initConfig()`.
-
-```js
-grunt.initConfig({
-  git_release: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-})
+```shell
+grunt release
 ```
 
-### Options
+By default, this will
+* increment the patch version (ex: from 1.2.0 to 1.2.1) in the package.json file using the [Semantic Versioning specification](http://semver.org/)
+* commit the package.json file
+* create a Git tag for the new version
+* push to the remote server
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+You can also increment the minor version (ex: from 1.2.0 to 1.3.0)
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  git_release: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+```shell
+grunt release:minor
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+Or the major version  (ex: from 1.2.0 to 2.0.0)
 
-```js
-grunt.initConfig({
-  git_release: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+```shell
+grunt release:major
+```
+
+Or force a specific version
+
+```shell
+grunt release:1.3.0-alpha
 ```
 
 ## Contributing
