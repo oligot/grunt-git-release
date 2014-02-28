@@ -1,6 +1,6 @@
 # grunt-git-release
 
-> Release a new version of your Git project
+> Grunt plugin to release a new version of your Git project
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
