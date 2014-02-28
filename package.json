@@ -1,6 +1,6 @@
 {
   "name": "grunt-git-release",
-  "description": "Release a new version of your Git project",
+  "description": "Grunt plugin to release a new version of your Git project",
   "version": "0.1.2",
   "homepage": "https://github.com/oli/grunt-git-release",
   "author": {
@@ -28,10 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "semver": "~2.1.0",
-    "shelljs": "~0.2.3",
-    "underscore": "~1.5.2",
-    "inquirer": "~0.3.3"
+    "git-release": "0.0.1"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",
