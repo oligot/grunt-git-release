@@ -2,22 +2,22 @@
   "name": "grunt-git-release",
   "description": "Grunt plugin to release a new version of your Git project",
   "version": "0.1.3",
-  "homepage": "https://github.com/oli/grunt-git-release",
+  "homepage": "https://github.com/oligot/grunt-git-release",
   "author": {
     "name": "Olivier Ligot",
     "email": "oligot@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/oli/grunt-git-release.git"
+    "url": "git://github.com/oligot/grunt-git-release.git"
   },
   "bugs": {
-    "url": "https://github.com/oli/grunt-git-release/issues"
+    "url": "https://github.com/oligot/grunt-git-release/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/oli/grunt-git-release/blob/master/LICENSE-MIT"
+      "url": "https://github.com/oligot/grunt-git-release/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
